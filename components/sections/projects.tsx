@@ -8,24 +8,28 @@ const dotColor: Record<Project["color"], string> = {
   sky: "rgba(56,189,248,0.3)",
   indigo: "rgba(99,102,241,0.3)",
   emerald: "rgba(16,185,129,0.3)",
+  caramel: "rgba(180,142,100,0.3)",
 };
 
 const tagColor: Record<Project["color"], string> = {
   sky: "bg-sky-500/15 text-sky-300 border-sky-500/20",
   indigo: "bg-indigo-500/15 text-indigo-300 border-indigo-500/20",
   emerald: "bg-emerald-500/15 text-emerald-300 border-emerald-500/20",
+  caramel: "bg-caramel-500/15 text-caramel-300 border-caramel-500/20",
 };
 
 const titleHover: Record<Project["color"], string> = {
   sky: "group-hover:text-sky-400",
   indigo: "group-hover:text-indigo-400",
   emerald: "group-hover:text-emerald-400",
+  caramel: "group-hover:text-caramel-400",
 };
 
 const labelColor: Record<Project["color"], string> = {
   sky: "text-sky-400",
   indigo: "text-indigo-400",
   emerald: "text-emerald-400",
+  caramel: "text-caramel-400",
 };
 
 export function Projects() {
@@ -51,7 +55,7 @@ export function Projects() {
           {projects.map((project, i) => (
             <Reveal key={project.title} delay={i * 0.1}>
               <Card as="article" className="group overflow-hidden hover-lift h-full flex flex-col">
-                <div className="h-40 bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden shrink-0">
+                <div className="h-48 bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden shrink-0">
                   <div
                     className="absolute inset-0 opacity-20"
                     style={{
@@ -60,55 +64,44 @@ export function Projects() {
                     }}
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-4xl font-black text-white/5 select-none tracking-widest text-center px-4">
-                      {project.monogram}
-                    </span>
-                  </div>
-                  <div className="absolute top-4 left-4">
-                    <span
-                      className={cn(
-                        "px-3 py-1 rounded-full text-xs font-bold border backdrop-blur-sm",
-                        tagColor[project.color]
-                      )}
-                    >
-                      {project.tag}
-                    </span>
+                    {project.imageUrl ? (
+                      <img
+                        src={project.imageUrl}
+                        alt={`${project.title} preview`}
+                        className="h-full w-full object-cover object-center"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="h-full w-full" />
+                    )}
                   </div>
                 </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <h4
-                    className={cn(
-                      "text-xl font-bold text-white mb-4 transition-colors",
-                      titleHover[project.color]
-                    )}
-                  >
-                    {project.title}
-                  </h4>
+                <div className="p-6 flex flex-col flex-1 justify-between">
+                  <div>
+                    <h4
+                      className={cn(
+                        "text-xl font-bold text-white mb-4 transition-colors",
+                        titleHover[project.color]
+                      )}
+                    >
+                      {project.title}
+                    </h4>
 
-                  <div className="space-y-3 text-sm text-slate-400 leading-relaxed mb-6 flex-1">
-                    <p>
-                      <span className={cn("font-semibold", labelColor[project.color])}>
-                        Problem —{" "}
-                      </span>
-                      {project.problem}
-                    </p>
-                    <p>
-                      <span className={cn("font-semibold", labelColor[project.color])}>
-                        My role —{" "}
-                      </span>
-                      {project.contribution}
-                    </p>
-                    <p>
-                      <span className={cn("font-semibold", labelColor[project.color])}>
-                        Impact —{" "}
-                      </span>
-                      {project.impact}
-                    </p>
+                    <div className="space-y-3 text-sm text-slate-400 leading-relaxed mb-6">
+                      <p>
+                        <span className={cn("font-semibold", labelColor[project.color])}>
+                          Description —{" "}
+                        </span>
+                        {project.description}
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex gap-3 mt-auto">
                     <a
                       href={project.liveUrl}
+                      target={project.liveUrl === "#" ? undefined : "_blank"}
+                      rel={project.liveUrl === "#" ? undefined : "noopener noreferrer"}
                       className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white text-slate-900 text-sm font-semibold hover:bg-slate-200 transition-colors"
                     >
                       Live Demo
