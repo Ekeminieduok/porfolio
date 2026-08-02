@@ -92,7 +92,7 @@ export type ExperienceItem = {
   company: string;
   location: string;
   points: string[];
-  color: "sky" | "indigo" | "amber" | "slate";
+  color: "sky" | "indigo" | "amber" | "slate" | "caramel";
 };
 
 export const experience: ExperienceItem[] = [
@@ -145,13 +145,12 @@ export const experience: ExperienceItem[] = [
 export type Project = {
   title: string;
   tag: string;
-  color: "sky" | "indigo" | "emerald";
+  color: "sky" | "indigo" | "emerald" | "caramel";
   monogram: string;
-  problem: string;
-  contribution: string;
-  impact: string;
+  description: string;
   liveUrl: string;
   githubUrl: string;
+  imageUrl?: string;
 };
 
 export const projects: Project[] = [
@@ -160,42 +159,39 @@ export const projects: Project[] = [
     tag: "Enterprise / HR-Tech",
     color: "emerald",
     monogram: "CLEARANCE",
-    problem:
-      "Organizations relied on a manual, paper-based process to clear corps members, causing administrative delays and inconsistent record-keeping.",
-    contribution:
-      "Built a self-service web platform enabling organizations to register, manage, and generate clearances digitally, replacing the manual HR workflow end to end.",
-    impact:
-      "Reduced administrative turnaround time and improved the accuracy and traceability of clearance records for HR teams.",
+    description: "Built a self-service web platform that digitized organizations' corps member clearance process end-to-end—replacing a manual, paper-based HR workflow—cutting administrative turnaround time and improving record accuracy and traceability.",
     liveUrl: "#",
     githubUrl: "https://github.com/Ekeminieduok",
+  },
+  {
+    title: "Luciano Designs",
+    tag: "Enterprise / E-Commerce",
+    color: "caramel",
+    monogram: "LUCIANO",
+    description: "Built a full-stack e-commerce platform for a luxury interior design studio using Next.js, TypeScript, and Tailwind CSS featuring a persistent cart system (Context API + localStorage), Firebase Auth, and Firestore for orders, products, and subscriber management.",
+    liveUrl: "https://agent-6a6f2d0e90023aca6efa88d6--lucianodesignss.netlify.app/",
+    githubUrl: "https://github.com/Ekeminieduok/luciano-designs",
+    imageUrl: "/luciano.png",
   },
   {
     title: "NRS Website — FIRS e-Invoicing",
     tag: "Government / Fintech",
     color: "indigo",
     monogram: "NRS",
-    problem:
-      "Businesses needed a compliant way to generate, validate, and manage electronic invoices under new FIRS/NRS regulations.",
-    contribution:
-      "Helped build a government-compliant platform supporting invoice generation, validation, and full lifecycle management for regulated businesses.",
-    impact:
-      "Enabled businesses to meet national e-invoicing compliance requirements while cutting down manual invoicing errors.",
-    liveUrl: "#",
-    githubUrl: "https://github.com/Ekeminieduok",
+    description: "Helped build a government-compliant platform supporting invoice generation, validation, and full lifecycle management for regulated businesses.",
+    liveUrl: "https://nrs-website-uiaa.vercel.app/",
+    githubUrl: "https://github.com/Ekeminieduok/nrs-website",
+    imageUrl: "/nrs.png",
   },
   {
     title: "Memory Jogger",
     tag: "Personal / Product",
     color: "sky",
     monogram: "JOGGER",
-    problem:
-      "Wanted to independently design, build, and ship a complete, publicly accessible application end to end.",
-    contribution:
-      "Built an interactive card-matching game from scratch and configured custom social sharing metadata to improve link previews and shareability.",
-    impact:
-      "Delivered a fully deployed, live product — demonstrating the ability to take a project from concept to launch without a team.",
-    liveUrl: "#",
-    githubUrl: "https://github.com/Ekeminieduok",
+    description: "Independently designed, built, and shipped an interactive card-matching game end-to-end, including custom social sharing metadata for improved link previews—taking it from concept to a fully deployed, live product solo.",
+    liveUrl: "https://memory-jogger.netlify.app/",
+    githubUrl: "https://github.com/Ekeminieduok/memory-jogger",
+    imageUrl: "/memory%20jogger.png",
   },
 ];
 
