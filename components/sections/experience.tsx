@@ -7,6 +7,7 @@ const dotColor: Record<ExperienceItem["color"], string> = {
   indigo: "border-indigo-500",
   amber: "border-amber-500",
   slate: "border-slate-500",
+   caramel: "border-orange-800",
 };
 
 const badgeColor: Record<ExperienceItem["color"], string> = {
@@ -14,6 +15,7 @@ const badgeColor: Record<ExperienceItem["color"], string> = {
   indigo: "bg-indigo-500/10 text-indigo-300 border-indigo-500/10",
   amber: "bg-amber-500/10 text-amber-300 border-amber-500/10",
   slate: "bg-white/5 text-slate-300 border-white/10",
+  caramel: "bg-orange-800/10 text-orange-300 border-orange-800/10",
 };
 
 const hoverBorder: Record<ExperienceItem["color"], string> = {
@@ -21,6 +23,7 @@ const hoverBorder: Record<ExperienceItem["color"], string> = {
   indigo: "hover:border-indigo-500/30",
   amber: "hover:border-amber-500/30",
   slate: "hover:border-white/20",
+  caramel: "hover:border-orange-800/30",
 };
 
 const bulletColor: Record<ExperienceItem["color"], string> = {
@@ -28,6 +31,7 @@ const bulletColor: Record<ExperienceItem["color"], string> = {
   indigo: "bg-indigo-500",
   amber: "bg-amber-500",
   slate: "bg-slate-500",
+  caramel: "bg-orange-800",
 };
 
 export function Experience() {
