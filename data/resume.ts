@@ -13,7 +13,7 @@ export const profile = {
   linkedin: "https://linkedin.com/in/ekemini-eduok",
   linkedinLabel: "linkedin.com/in/ekemini-eduok",
   // Files in the public folder are served from the root path.
-  resumeUrl: "/Ekeminiabasi_Eduok%20Frontend%20developer_CV.pdf",
+  resumeUrl: "/EkeminiabasiFrontend%20Developer.pdf",
 };
 
 export const stats = [
