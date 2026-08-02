@@ -12,8 +12,8 @@ export const profile = {
   githubLabel: "github.com/Ekeminieduok",
   linkedin: "https://linkedin.com/in/ekemini-eduok",
   linkedinLabel: "linkedin.com/in/ekemini-eduok",
-  // Drop your actual CV file into /public and update this path.
-  resumeUrl: "/public/Ekeminiabasi_Eduok Frontend developer_CV.pdf",
+  // Files in the public folder are served from the root path.
+  resumeUrl: "/Ekeminiabasi_Eduok%20Frontend%20developer_CV.pdf",
 };
 
 export const stats = [
