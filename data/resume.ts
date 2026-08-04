@@ -12,8 +12,8 @@ export const profile = {
   githubLabel: "github.com/Ekeminieduok",
   linkedin: "https://linkedin.com/in/ekemini-eduok",
   linkedinLabel: "linkedin.com/in/ekemini-eduok",
-  // Files in the public folder are served from the root path.
-  resumeUrl: "/EkeminiabasiFrontend%20Developer.pdf",
+  // Drop your actual CV file into /public and update this path.
+  resumeUrl: "/public/Ekeminiabasi_Eduok Frontend developer_CV.pdf",
 };
 
 export const stats = [
@@ -154,15 +154,15 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    title: "Automated Clearance App",
-    tag: "Enterprise / HR-Tech",
-    color: "emerald",
-    monogram: "CLEARANCE",
-    description: "Built a self-service web platform that digitized organizations' corps member clearance process end-to-end—replacing a manual, paper-based HR workflow—cutting administrative turnaround time and improving record accuracy and traceability.",
-    liveUrl: "#",
-    githubUrl: "https://github.com/Ekeminieduok",
-  },
+  // {
+  //   title: "Automated Clearance App",
+  //   tag: "Enterprise / HR-Tech",
+  //   color: "emerald",
+  //   monogram: "CLEARANCE",
+  //   description: "Built a self-service web platform that digitized organizations' corps member clearance process end-to-end—replacing a manual, paper-based HR workflow—cutting administrative turnaround time and improving record accuracy and traceability.",
+  //   liveUrl: "#",
+  //   githubUrl: "https://github.com/Ekeminieduok",
+  // },
   {
     title: "Luciano Designs",
     tag: "Enterprise / E-Commerce",
@@ -192,6 +192,16 @@ export const projects: Project[] = [
     liveUrl: "https://memory-jogger.netlify.app/",
     githubUrl: "https://github.com/Ekeminieduok/memory-jogger",
     imageUrl: "/memory%20jogger.png",
+  },
+  {
+    title: "Fx Plus",
+    tag: "Personal / Product",
+    color: "sky",
+    monogram: "FXPLUS",
+    description: "Designed and built FX Plus, a real-time forex analysis tool integrating live pricing, custom technical indicators, and AI-powered trade recommendations—from initial concept through full deployment",
+    liveUrl: "https://fxplus.vercel.app/",
+    githubUrl: "https://github.com/Ekeminieduok/fxplus",
+    imageUrl: "/fx plus.png",
   },
 ];
 
