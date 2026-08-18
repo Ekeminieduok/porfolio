@@ -13,7 +13,8 @@ export const profile = {
   linkedin: "https://linkedin.com/in/ekemini-eduok",
   linkedinLabel: "linkedin.com/in/ekemini-eduok",
   // Drop your actual CV file into /public and update this path.
-  resumeUrl: "/public/Ekeminiabasi_Eduok Frontend developer_CV.pdf",
+  // Files in `public/` are served from the site root — do NOT include `/public` in the URL.
+  resumeUrl: "/EKEMINIABASI%20USEN%20EDUOK%20FRONTEND%20DEVELOPER%20CV.pdf",
 };
 
 export const stats = [
@@ -97,14 +98,14 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    period: "May 2026 – Present",
+    period: "July 2026 – Present",
     role: "Frontend Developer",
-    company: "Luciano Designs",
+    company: "GD properties",
     location: "Remote",
     color: "sky",
     points: [
-      "Built and maintained a full-scale e-commerce platform using Next.js, TypeScript, and Tailwind CSS — implementing a cart and checkout system with Context API + useReducer, persistent localStorage hydration, and a Firebase Firestore service layer (users, products, orders) backed by secure email/password authentication.",
-"Designed a reusable component library (floating nav, autoplay carousel, FAQ interface) and collaborated with business stakeholders to ship iterative feature releases, maintaining cross-browser compatibility and mobile responsiveness throughout.",
+      "Developed and managed responsive property websites using React, Next.js, Webflow",
+      "Managed ongoing website updates, performance optimization, responsive compatibility, frontend troubleshooting, and REST API/third-party integrations, ensuring reliable digital experiences across property management and investment services.",
     ],
   },
   {
@@ -178,7 +179,7 @@ export const projects: Project[] = [
     tag: "Government / Fintech",
     color: "indigo",
     monogram: "NRS",
-    description: "Helped build a government-compliant platform supporting invoice generation, validation, and full lifecycle management for regulated businesses.",
+    description: "Built a government-compliant platform supporting invoice generation, validation, and full lifecycle management for regulated businesses.",
     liveUrl: "https://nrs-website-uiaa.vercel.app/",
     githubUrl: "https://github.com/Ekeminieduok/nrs-website",
     imageUrl: "/nrs.png",
