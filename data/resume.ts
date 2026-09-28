@@ -170,7 +170,7 @@ export const projects: Project[] = [
     color: "caramel",
     monogram: "LUCIANO",
     description: "Built a full-stack e-commerce platform for a luxury interior design studio using Next.js, TypeScript, and Tailwind CSS featuring a persistent cart system (Context API + localStorage), Firebase Auth, and Firestore for orders, products, and subscriber management.",
-    liveUrl: "https://agent-6a6f2d0e90023aca6efa88d6--lucianodesignss.netlify.app/",
+    liveUrl: "https://lucianodesignss.netlify.app/",
     githubUrl: "https://github.com/Ekeminieduok/luciano-designs",
     imageUrl: "/luciano.png",
   },
