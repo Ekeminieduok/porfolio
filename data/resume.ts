@@ -155,6 +155,16 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "Job Plex",
+    tag: "Careers / Job discovery",
+    color: "indigo",
+    monogram: "JOBPLEX",
+    description: "A job discovery workspace where candidates can set their career preferences, explore opportunities, and keep their résumé close at hand.",
+    liveUrl: "https://jobplex-na.vercel.app",
+    githubUrl: "https://github.com/Ekeminieduok/jobplex",
+    imageUrl: "/job-plex-dashboard.png",
+  },
   // {
   //   title: "Automated Clearance App",
   //   tag: "Enterprise / HR-Tech",

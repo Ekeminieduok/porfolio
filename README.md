@@ -1,67 +1,39 @@
 # Ekemini Eduok — Portfolio
 
-A modern, dark-themed portfolio built with Next.js 14 (App Router), React, TypeScript, Tailwind CSS, and Framer Motion — positioning Ekemini as a Junior Frontend Developer & UI Designer for fintech, banking, and startup recruiters.
+The approved portfolio workspace implemented in the original Next.js 14 App Router project. The homepage renders expandable project cards, a bio, project filters, keyboard navigation (Ctrl/Cmd + K), a scroll-driven career roadmap, and five local SVG toolkit logos.
 
-## Stack
+## Run locally
 
-- **Next.js 14** (App Router) + **TypeScript**
-- **Tailwind CSS** for styling, with a small shadcn/ui-style component layer (`Button`, `Card`, `Badge`)
-- **Framer Motion** for scroll reveals, mobile menu transitions, and counters
-- **lucide-react** for icons
+From the directory containing package.json, run:
 
-## Getting started
-
-```bash
-npm install
+```sh
+npm ci
 npm run dev
 ```
 
-Then open [http://localhost:3000](http://localhost:3000).
+Open http://localhost:3000. For pnpm, use `pnpm install` and `pnpm dev`. The included lockfile is for npm.
 
-## Project structure
+## Dependencies
 
-```
-app/
-  layout.tsx        Root layout, fonts, SEO metadata
-  page.tsx           Assembles all sections
-  globals.css        Tailwind layers, glass/gradient utilities, reduced-motion support
-components/
-  navbar.tsx
-  footer.tsx
-  reveal.tsx         Scroll-triggered fade/slide-up wrapper (Framer Motion)
-  counter.tsx         Animated number counter
-  ambient-background.tsx
-  ui/                button.tsx, card.tsx, badge.tsx (shadcn/ui-style primitives)
-  sections/           hero, about, skills, experience, projects, education, contact
-data/
-  resume.ts          All content (profile, skills, experience, projects, education) — edit here
-lib/
-  utils.ts           `cn()` class merge helper
-```
+Only two direct dependencies were added: `@fontsource-variable/outfit` for headings and `@fontsource-variable/manrope` for body text. Both are in package.json and ship fonts locally. The existing `framer-motion` package powers project expansion, the bio, and roadmap progress. Next.js, React, React DOM, and the existing development dependencies are included in the install command. The logo SVGs are in public/stack.
 
-## Editing your content
+## Editing
 
-Everything text-based lives in **`data/resume.ts`** — update your role, skills, experience, and projects there without touching component code.
+- app/page.tsx renders the workspace. app/layout.tsx imports the fonts and site metadata.
+- components/portfolio/workspace.jsx contains the tabs, quick navigation, and bio.
+- components/portfolio/project-card.jsx and modal.jsx handle project previews and dialog interactions.
+- components/portfolio/roadmap.jsx renders the chronological milestones and scroll progress.
+- data/resume.ts supplies contact details, résumé, project links and screenshot paths. data/portfolio.js supplies the card copy, project order, and roadmap milestones.
+- app/globals.css contains the responsive layout, typography, and component styles.
+- public/ contains the portrait, résumé, project screenshots, and toolkit logos.
 
-### Things to finish before deploying
+## Production
 
-1. **Add your CV PDF** — drop the actual file at `public/ekemini-eduok-cv.pdf` (or update `profile.resumeUrl` in `data/resume.ts` to match your filename).
-2. **Add a headshot** — replace the "EE" placeholder in `components/sections/hero.tsx` with an `next/image` of your photo for a stronger first impression.
-3. **Add real Live Demo links** — the `liveUrl` fields in `data/resume.ts` are placeholders (`#`) since I don't have your deployed URLs. Swap them in once your projects are hosted (Vercel/Netlify).
-4. **Update `metadataBase`** in `app/layout.tsx` once you have a real domain, for correct Open Graph previews.
-
-## Build & deploy
-
-```bash
+```sh
 npm run build
-npm run start
+npm start
 ```
 
-Deploys cleanly to **Vercel** (recommended — zero config for Next.js) or Netlify.
+## Credits
 
-## Accessibility & performance notes
-
-- Respects `prefers-reduced-motion` (see `app/globals.css`).
-- Semantic landmarks (`nav`, `main`, `section`, `footer`) and labeled icon-only links.
-- System font loading via `next/font/google` (self-hosted, no layout shift).
-- No client-side state libraries beyond React — fast first load.
+The expandable project cards adapt the shared-layout pattern from Watermelon UI's [Expandable Event Card](https://ui.watermelon.sh/animated-components/expandable-event-card). Toolkit logos come from [Devicon](https://github.com/devicons/devicon/tree/v2.16.0).

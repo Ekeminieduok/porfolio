@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import "@fontsource-variable/manrope/index.css";
+import "@fontsource-variable/outfit/index.css";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ekemini-eduok.dev"),
@@ -43,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: "#020617",
+  themeColor: "#eeedf2",
 };
 
 export default function RootLayout({
@@ -52,10 +46,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="bg-slate-950 text-slate-300 overflow-x-hidden">
-        {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }
